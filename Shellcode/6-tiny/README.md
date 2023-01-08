@@ -9,7 +9,7 @@ rsp = something on stack
 Since `rsp` is pointing to the stack, which is `RWX`, we can simply program a `read` in this way:
 
 ```assembly
-;           rax     rdi                 rsi         rdx    
+;         rax     rdi                 rsi         rdx    
 ; 	read	0x00	unsigned int fd	    char *buf	size_t count
 push rax 
 pop rdi ; fd = 0 stdin
