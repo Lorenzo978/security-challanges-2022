@@ -10,7 +10,7 @@ Since `rsp` is pointing to the stack, which is `RWX`, we can simply program a `r
 
 ```assembly
 ;         rax     rdi                 rsi         rdx    
-; 	read	0x00	unsigned int fd	    char *buf	size_t count
+;         0x00	unsigned int fd	    char *buf	size_t count       <-- read
 push rax 
 pop rdi ; fd = 0 stdin
 
